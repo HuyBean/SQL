@@ -1,0 +1,19 @@
+-- 1. Cho danh sách các cuốn sách (isbn, mã sách, tên sách) được tất cả đọc giả mượn
+-- 2. Cho biết (mã nhân viên, họ tên, số lần lập phiếu mượn) có số lần lập phiếu mượn nhiều
+-- nhất trong 03/2023
+-- 3. Viết stored procedure, function tương ứng thực hiện cập nhật lương cho nhân viên sao cho
+-- thoả các quy định sau:
+-- - Input: mã nhân viên
+-- - Output: cập nhật lương thành công
+-- - Các bước:
+-- o Kiểm tra dữ liệu mã nhân viên tồn tại hợp lệ
+-- o Kiểm tra ngày hưởng lương sau cùng nhất của nhân viên đến hiện tại đã đủ 3 năm
+-- o Nếu vi phạm các quy định trên thì báo lỗi và thoát.
+-- o Ngược lại:
+-- ▪ Tính Lương hiện tại của 1 giảng viên đó theo công thức: LuongHienTai =
+-- (Hệ số lương cũ + 0.3) * Mức lương cơ bản + (phụ cấp cũ + 300.000)
+-- ▪ Kiểm tra lương mới > LuongHienTai
+-- ▪ Nếu thoả: cập nhật LuongHienTai cho giảng viên
+-- ▪ Thêm một dòng lưu lại Hệ số lương, mức lương cơ bản, phụ cấp, ngày hưởng
+-- lương (là ngày hiện tại) vào quá trình lương của nhân viên này.
+-- Sinh viên tự cho dữ liệu mẫu để gọi thực thi stored/function tương ứng
